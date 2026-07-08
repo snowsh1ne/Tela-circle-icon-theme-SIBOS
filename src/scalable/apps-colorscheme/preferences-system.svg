@@ -1,7 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64">
- <defs>
-  <style id="current-color-scheme" type="text/css">
-   .ColorScheme-Text { color:#565656; } .ColorScheme-Highlight { color:#5294e2; }
-  </style>
- </defs>
-<circle cx="32" cy="32" r="27" style="fill:currentColor" class="ColorScheme-Highlight"/><path d="M32.004 10.004a22 22 0 0 0-14.003 5.05v2.683A20 20 0 0 0 12.003 32a20 20 0 0 0 5.998 14.263v2.69A22 22 0 0 0 32.004 54 21.996 21.996 0 0 0 54 32.003a21.996 21.996 0 0 0-21.996-21.996z" opacity=".1"/><rect width="28" height="10" x="18" y="27" fill="#fff" opacity=".35" ry="5"/><circle cx="40.001" cy="32" r="8.001" fill="#fff"/></svg>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#a4a8ae"/>
+      <stop offset="100%" stop-color="#6c7178"/>
+    </linearGradient>
+    <linearGradient id="gloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.10"/>
+    </linearGradient>
+    <linearGradient id="gearGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e9ebef"/>
+    </linearGradient>
+    <filter id="gearShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1"/>
+      <feOffset dx="0" dy="1" result="off"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.35"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <circle cx="32" cy="32" r="27" fill="url(#bgGrad)"/>
+  <circle cx="32" cy="32" r="27" fill="url(#gloss)"/>
+  <g filter="url(#gearShadow)">
+    <path fill="url(#gearGrad)" d="M33.60 32.91L35.92 35.94L32.94 38.92L29.91 36.60L27.61 37.55L27.11 41.33L22.89 41.33L22.39 37.55L20.09 36.60L17.06 38.92L14.08 35.94L16.40 32.91L15.45 30.61L11.67 30.11L11.67 25.89L15.45 25.39L16.40 23.09L14.08 20.06L17.06 17.08L20.09 19.40L22.39 18.45L22.89 14.67L27.11 14.67L27.61 18.45L29.91 19.40L32.94 17.08L35.92 20.06L33.60 23.09L34.55 25.39L38.33 25.89L38.33 30.11L34.55 30.61Z"/>
+    <circle cx="25" cy="28" r="4.2" fill="url(#bgGrad)"/>
+    <path fill="url(#gearGrad)" d="M46.95 44.75L49.27 45.98L48.25 48.44L45.74 47.68L44.68 48.74L45.44 51.25L42.98 52.27L41.75 49.95L40.25 49.95L39.02 52.27L36.56 51.25L37.32 48.74L36.26 47.68L33.75 48.44L32.73 45.98L35.05 44.75L35.05 43.25L32.73 42.02L33.75 39.56L36.26 40.32L37.32 39.26L36.56 36.75L39.02 35.73L40.25 38.05L41.75 38.05L42.98 35.73L45.44 36.75L44.68 39.26L45.74 40.32L48.25 39.56L49.27 42.02L46.95 43.25Z"/>
+    <circle cx="41" cy="44" r="2.8" fill="url(#bgGrad)"/>
+  </g>
+</svg>
